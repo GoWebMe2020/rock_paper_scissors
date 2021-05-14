@@ -17,8 +17,14 @@ class Rps < Sinatra::Base
         redirect '/play'
     end
 
+    post '/play' do
+        $choice = params[:choice]
+        redirect '/play'
+    end
+
     get '/play' do
         @name = $name
+        @choice = $choice
         erb :play
     end
 

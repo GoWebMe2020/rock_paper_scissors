@@ -13,14 +13,16 @@
 
     <%= @name %>
 
-    <form action="/play" method="POST">
-        <label for="rock">Rock</label>
+    <form action="/play" method="post">
+
         <input type="submit" name="choice" id="rock" value="Rock">
-        <label for="paper">Paper</label>
+
         <input type="submit" name="choice" id="paper" value="Paper">
-        <label for="rock">Scissors</label>
+
         <input type="submit" name="choice" id="scissors" value="Scissors">
     </form>
+
+    <p>You chose <%= @choice %></p>
 
 </body>
 </html>
