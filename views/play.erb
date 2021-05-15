@@ -11,18 +11,31 @@
 </head>
 <body>
 
-    <%= @name %>
+    <%= @play.name %><br>
 
     <form action="/play" method="post">
-
         <input type="submit" name="choice" id="rock" value="Rock">
-
         <input type="submit" name="choice" id="paper" value="Paper">
-
         <input type="submit" name="choice" id="scissors" value="Scissors">
+        <input type="submit" name="choice" id="lizard" value="Lizard">
+        <input type="submit" name="choice" id="spock" value="Spock">
     </form>
 
-    <p>You chose <%= @choice %></p>
+    <p>You chose <%= @play.choice.to_s %></p>
+
+    <p>The Machine chose <%= @play.machine_choice.to_s %></p>
+
+    <% if @play.draw? %>
+        <p>It's a Draw!</p>
+    <% elsif @play.lose? %>
+        <p>You Lose!</p>
+    <% elsif @play.win? %>
+        <p>You Win!</p>
+    <% end %>
+
+    <form action="/restart" method="post">
+        <input type="submit" value="Restart">
+    </form>
 
 </body>
 </html>
