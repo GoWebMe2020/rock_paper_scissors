@@ -38,7 +38,7 @@ feature 'playing the RPS game' do
         scenario 'player draws machine' do
             allow(MachineChoice::CHOICES).to receive(:sample).and_return(:paper)
             click_button 'Paper'
-            expect(page).to have_content("It's a Draw!")
+            expect(page).to have_content("You Draw!")
         end
     end
 end

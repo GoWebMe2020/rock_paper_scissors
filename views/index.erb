@@ -11,11 +11,23 @@
 </head>
 <body>
 
-    <form action="/name" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter Your Name Here">
-        <input type="submit" value="Submit">
-    </form>
+    <div class="reg_form_land_page">
+        <div class="reg_form">
+            <form action="/name" method="post">
+                <div>
+                    <label for="name">Enter Your Name Here</label>
+                </div>
+                <div>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <input class="sub_btn" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
     
 </body>
 </html>

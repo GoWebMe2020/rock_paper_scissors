@@ -1,5 +1,6 @@
 class Play
 
+    # I initially tried to use strings instead of symbols but it did not work properly. Symbols became easier to manipulate.
     WIN_DRAW_LOSE = {
         rock: {rock: :draw, paper: :lose, scissors: :win, lizard: :win, spock: :lose},
         paper: {rock: :win, paper: :draw, scissors: :lose, spock: :win, lizard: :lose},
